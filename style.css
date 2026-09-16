@@ -6,6 +6,19 @@
     color: white;
  }
 
+button {
+    background-color: rgb(53, 53, 53);
+    padding: 3px;
+}
+button:hover {
+    background-color: gray;
+    border: 3px solid rgb(53, 53, 53);
+}
+button:active {
+    background-color: blue;
+    cursor: progress;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -30,6 +43,16 @@ header {
 
 a {
     color: white;
+}
+a:hover {
+    color: lightblue;
+    font-size: large;
+}
+
+a:active {
+    font-size: medium;
+    color: rgb(0, 153, 255);
+    cursor: progress;
 }
 
 .contentM {
@@ -77,7 +100,6 @@ aside img {
 }
 .achvmnts img:active {
     top: 1px;
-    border: none;
     box-shadow: none;
     cursor: progress;
 }
@@ -112,6 +134,21 @@ figcaption {
 .achvmnts article {
     position: relative;
     bottom: 20px;
+}
+
+footer {
+    .cA {
+        button, p {
+            display: inline-flex;
+            margin: auto 3px;
+        }
+    }
+}
+
+.sign {
+    text-align: left;
+    font-size: 0.7em;
+    padding-left: 5px;
 }
 
 @media  screen and (max-width: 700px) {

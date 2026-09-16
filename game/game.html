@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>game</title>
+    <link href="game.css" rel="stylesheet">
+    <script type="module" src="script/game.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Game</h1>
+        <ul>
+            <li>pick a number from 1 to 10</li>
+            <li>if your guess is closer to the random number you win!</li>
+        </ul>
+    </header>
+    <main>
+        <section class="ranN">
+            <h2>Random Number</h2>
+            <p id="ranN">?</p>
+        </section>
+        <section class="result">
+            <table class="t1">
+                <tr>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                <td>Player</td>
+                <td>Computer</td>
+                </tr>
+                <tr>
+                    <td id="botS">0</td>
+                    <td id="plyS">0</td>
+                </tr>
+            </table>
+            <table class="t2">
+                <tr>
+                    <th>Guess result</th>
+                </tr>
+                <tr>
+                    <td>Your Guess</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>Computer Guess</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                </tr>
+                <tr>
+                    <td>Winner</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                </tr>
+            </table>
+            <table class="t3">
+                <tr>
+                    <th>Round</th>
+                </tr>
+                <tr>
+                <td id="rnd">1</td>
+                </tr>
+            </table>
+        </section>
+        <section class="boxC">
+            <section class="box">
+                <h2>Computer</h2>
+                <p id="botG">?</p>
+            </section>
+            <section class="box">
+                <h2>Player</h2>
+                <input id="plyG" type="number" value="0">
+                <button id="sbmt">Submit</button>
+                <button id="nxt">Next</button>
+            </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
