@@ -80,14 +80,11 @@ aside img {
 
 aside {
     width: 28%;
-    margin: 0px auto;
+    margin: 10px auto;
     justify-content: center;
     background-color: gray;
-    align-content: space-around;
 }
 aside section {
-    height: 30%;
-    margin: 50px 0px;
     background-color: gray;
     align-content: space-around;
 }
@@ -98,6 +95,8 @@ aside figure {
 aside article {
     background-color: black;
     padding: 5px;
+    position: relative;
+    bottom: 50px;
 }
 
 figcaption {
@@ -135,14 +134,14 @@ figcaption {
     }
     aside article {
         position: relative;
-        bottom: 250px;
+        bottom: 30px;
     }
     .achvmnts {
         margin: auto;
         padding: 1px;
     }
     .achvmnts section {
-        padding: 0px;
+        padding: 10px;
         margin: auto;
     }
     body {
