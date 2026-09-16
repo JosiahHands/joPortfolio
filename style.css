@@ -1,0 +1,168 @@
+ * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+    background-color: black;
+ }
+
+body {
+    width: 100%;
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+ol, ul {
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+}
+
+header {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+}
+
+a {
+    color: white;
+}
+
+.contentM {
+    display: flex;
+    background-color: gray;
+}
+
+.achvmnts img {
+    width: 100%;
+}
+
+aside img {
+    width: 100%;
+}
+.achvmnts {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achvmnts section {
+    width: auto;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 90%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    justify-content: center;
+    border: 5px solid rgb(69, 69, 69);
+}
+
+.achvmnts section article {
+    width: 90%;
+    margin: auto;
+}
+
+
+.achvmnts img:hover {
+    position: relative;
+    bottom: 5px;
+    border: 1px solid rgb(69, 69, 69);
+    box-shadow: 0 5px rgb(69, 69, 69);
+}
+.achvmnts img:active {
+    top: 1px;
+    border: none;
+    box-shadow: none;
+    cursor: progress;
+}
+
+aside {
+    width: 28%;
+    margin: 0px auto;
+    justify-content: center;
+    background-color: gray;
+    align-content: space-around;
+}
+aside section {
+    height: 30%;
+    margin: 50px 0px;
+    background-color: gray;
+    align-content: space-around;
+}
+aside figure {
+    background-color: gray;
+    margin: auto;
+}
+aside article {
+    background-color: black;
+    padding: 5px;
+}
+
+figcaption {
+    position: relative;
+    bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.achvmnts article {
+    position: relative;
+    bottom: 20px;
+}
+
+@media  screen and (max-width: 700px) {
+    .contentM {
+        display: block;
+    }
+    .achvmnts, aside {
+        width: 100%;
+    }
+    aside {
+        display: flex;
+    }
+    aside section {
+        width: 50%;
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    aside {
+        display: block;
+    }
+    aside section {
+        width: 100%;
+    }
+    aside article {
+        position: relative;
+        bottom: 250px;
+    }
+    .achvmnts {
+        margin: auto;
+        padding: 1px;
+    }
+    .achvmnts section {
+        padding: 0px;
+        margin: auto;
+    }
+    body {
+        font-size: 14px;
+    }
+    figcaption {
+        display: none;
+    }
+    .achvmnts figure {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        bottom: 15px;
+    }
+    * {
+        min-width: 0;
+    }
+}
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 12px;
+    }
+}
