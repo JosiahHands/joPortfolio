@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>game</title>
     <link href="game.css" rel="stylesheet">
-    <script type="module" src="script/game.js" defer></script>
-</head>
+    <script type="module" src="script/game.js" async></script>
+</head> 
 <body>
     <header>
         <h1>Game</h1>
@@ -43,7 +43,7 @@
                     <td>Your Guess</td>
                 </tr>
                 <tr>
-                    <td id="plrG">?</td>
+                    <td id="urG">?</td>
                 </tr>
                 <tr>
                     <td>Computer Guess</td>
@@ -74,7 +74,7 @@
             </section>
             <section class="box">
                 <h2>Player</h2>
-                <input id="urG" type="number" value="0">
+                <input id="plyG" type="number" value="0">
                 <button id="sbmt">Submit</button>
                 <button id="nxt">Next</button>
             </section>
