@@ -142,11 +142,10 @@ figcaption {
 }
 
 .gameCap {
-    background-color: black;
     color: white;
-    bottom: 300px;
-    font-size: 1.3em;
-    text-decoration: underline;
+    bottom: 0;
+    font-size: 1.7em;
+    font-weight: bold;
 }
 
 
