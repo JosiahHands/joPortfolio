@@ -131,6 +131,25 @@ figcaption {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.gamePic {
+    margin: 400px auto auto;
+}
+
+.gamePic:hover {
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+}
+
+.gameCap {
+    background-color: black;
+    color: white;
+    bottom: 300px;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+
 .achvmnts article {
     position: relative;
     bottom: 20px;
@@ -163,6 +182,9 @@ footer {
     }
     aside section {
         width: 50%;
+    }
+    .gamePic {
+        display: none;
     }
 }
 
