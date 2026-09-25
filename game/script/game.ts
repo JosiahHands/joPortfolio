@@ -48,7 +48,7 @@ const block = () => {
 const submit = () => {
     const valid = Number(plyG.value)
     if (valid > 10 || valid < 1) {
-        error.innerHTML = 'Error! Invalid number'
+        error.innerHTML = 'Error! Invalid number.'
     } else {
         error.innerHTML = ''
         block();
