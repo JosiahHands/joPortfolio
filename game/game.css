@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     width: 99%;
 }
-p, td, button{
+p, td, button, input, #botInput{
     font-size: 1.5em;
 }
 header {
@@ -73,7 +73,7 @@ main {
     body {
         font-size: 0.8em;
     }
-    p, td, button{
+    p, td{
     font-size: 0.8em; 
     }
 }
