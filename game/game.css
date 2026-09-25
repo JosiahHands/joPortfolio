@@ -74,6 +74,23 @@ main {
         font-size: 0.8em;
     }
     p, table{
+    font-size: 1.3em; 
+    }
+}
+
+@media  screen and (max-width: 390px) {
+    p, table{
+    font-size: 1.1em; 
+    }
+}
+
+@media  screen and (max-width: 350px) {
+    p, table{
+    font-size: 0.9em; 
+    }
+}
+@media  screen and (max-width: 300px) {
+    p, table{
     font-size: 0.8em; 
     }
 }
