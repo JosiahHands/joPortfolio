@@ -11,6 +11,7 @@
     // table 3
         const rnd = document.querySelector('#rnd') as HTMLElement;
     // input
+        const error = document.querySelector('#error') as HTMLElement;
         const plyG = document.querySelector('#plyG')as HTMLInputElement;
         const sbmt = document.querySelector('#sbmt') as HTMLElement;
         const nxt = document.querySelector('#nxt') as HTMLElement;
@@ -45,32 +46,38 @@ const block = () => {
     }
 } 
 const submit = () => {
-    block();
-    const rand = rand1();
-    const randBot = rand2();
-    botInput.innerHTML = randBot.toString();
-    ranN.innerHTML = rand.toString();
-    botG.innerHTML = randBot.toString();
-    const guess = Number(plyG.value);
-    urG.innerHTML = plyG.value;
-    const winner = () => {
-        const urAb = Math.abs(guess-rand)
-        const botAbs = Math.abs(randBot-rand)
-        if (urAb < botAbs) {
-            return true;
-        } else if (urAb === botAbs) {
-            return true;
-        };
-        return false;
-    }
-    if (winner() === true) {
-        wnr.innerHTML = 'You won!';
-        addScore(plyS)
-    } else if (winner() === false) {
-        wnr.innerHTML = 'Computer won!';
-        addScore(botS)
+    const valid = Number(plyG.value)
+    if (valid > 10 || valid < 1) {
+        error.innerHTML = 'Error! Invalid number'
     } else {
-        wnr.innerHTML = 'Error!';
+        error.innerHTML = ''
+        block();
+        const rand = rand1();
+        const randBot = rand2();
+        botInput.innerHTML = randBot.toString();
+        ranN.innerHTML = rand.toString();
+        botG.innerHTML = randBot.toString();
+        urG.innerHTML = plyG.value;
+        const winner = () => {
+            const guess = Number(plyG.value);
+            const urAb = Math.abs(guess-rand)
+            const botAbs = Math.abs(randBot-rand)
+            if (urAb < botAbs) {
+                return true;
+            } else if (urAb === botAbs) {
+                return true;
+            };
+            return false;
+        }
+        if (winner() === true) {
+            wnr.innerHTML = 'You won!';
+            addScore(plyS)
+        } else if (winner() === false) {
+            wnr.innerHTML = 'Computer won!';
+            addScore(botS)
+        } else {
+            wnr.innerHTML = 'Error!';
+        }
     }
 }
 
@@ -103,14 +110,14 @@ const resetBtn = () => {
 reset.onclick = resetBtn;
 
 const addInput = (el: HTMLInputElement): void => {
-    let num = Number(el.value)
-    num += 1;
-    el.value = num.toString();
+    const max = Number(el.max)
+    let num = Number(el.value);
+    if (num < max) el.value = String(num + 1);
 }
 const subInput = (el: HTMLInputElement): void => {
-    let num = Number(el.value)
-    num -= 1;
-    el.value = num.toString();
+    const min = Number(el.min)
+    let num = Number(el.value);
+    if (num > min) el.value = String(num - 1);
 }
 
 const addVal = () => {
