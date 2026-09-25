@@ -45,7 +45,9 @@ const block = () => {
         nxt.style.display = 'none';
     }
 } 
+reset.hidden = true
 const submit = () => {
+    reset.hidden = false
     const valid = Number(plyG.value)
     if (valid > 10 || valid < 1) {
         error.innerHTML = 'Error! Invalid number.'
@@ -98,17 +100,19 @@ const next = () => {
 nxt.onclick = next;
 
 const resetBtn = () => {
-     ranN.innerHTML = '?'     
-     botS.innerHTML = '0'
-     plyS.innerHTML = '0'
-     urG .innerHTML = '?'
-     botG.innerHTML = '?'
-     wnr.innerHTML = '?'
-     rnd.innerHTML = '?'
-     botInput.innerHTML = '?'
+    sbmt.style.display = 'block';
+    nxt.style.display = 'none';
+    ranN.innerHTML = '?'     
+    botS.innerHTML = '0'
+    plyS.innerHTML = '0'
+    urG .innerHTML = '?'
+    botG.innerHTML = '?'
+    wnr.innerHTML = '?'
+    rnd.innerHTML = '1'
+    botInput.innerHTML = '?'
+    reset.hidden = true
 }
 reset.onclick = resetBtn;
-
 const addInput = (el: HTMLInputElement): void => {
     const max = Number(el.max)
     let num = Number(el.value);
