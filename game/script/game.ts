@@ -83,6 +83,7 @@ const next = () => {
     wnr.innerHTML = '?';
     botInput.innerHTML = '?';
     urG.innerHTML = '?';
+    plyG.value = '1';
     addScore(rnd);
 
 }
